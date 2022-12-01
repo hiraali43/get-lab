@@ -30,8 +30,5 @@ jobs:
     - run: sudo npm ci
     - run: sudo npm run build --if-present
     - run: sudo npm install express
-<<<<<<< HEAD
-    - run: sudo jest test
-=======
+    - run: sudo npm install jest --global
     - run: sudo npm test
->>>>>>> d7afad41a0c383a7f2fb59953a92a8fb1185d309
