@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "prettify": "prettier -l --write \"**/*.js\"",
-    "test": "node /spec/persistence/sqlit.spec.js",
+    "test": "jest",
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
