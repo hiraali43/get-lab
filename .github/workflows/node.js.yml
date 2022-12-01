@@ -30,3 +30,4 @@ jobs:
     - run: sudo npm ci
     - run: sudo npm run build --if-present
     - run: sudo npm install express
+    - run: sudo npm test
