@@ -1,6 +1,6 @@
 test_variable:
   stage: test
   script:
-    - echo: "$CI_JOB_STAGE"
+    - echo "$CI_JOB_STAGE"
 
 
