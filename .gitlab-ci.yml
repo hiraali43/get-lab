@@ -4,4 +4,4 @@ variables:
 job1:
   stage: test
   script:
-    - echo '$VAR_2'
+    - 'eval "$VAR_2"'
