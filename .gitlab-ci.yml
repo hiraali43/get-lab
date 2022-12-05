@@ -1,11 +1,7 @@
 variables:
-  VAR_1: "all jobs can use this variable's value"
-test_variables:
-  variables:
-    VAR_2: "This variable can only be used by the job in which it's defined"
-
+  VAR_1: "my name is hira ali"
+  VAR_2: ""$VAR_1" and I'm not a terrorist"
+job1:
   stage: test
   script:
-    - echo "$VAR_1 and $VAR_2"
-
-
+    - echo "$VAR_2"
