@@ -1,6 +1,6 @@
-job1:
+job:
   variables:
-    VAR_1: 'my name is hira ali'
-    VAR_2: '"$VAR_1" and I'm not a terrorist'
+    FLAGS: '-al'
+    LS_CMD: 'ls "$FLAGS"'
   script:
-    - echo "$VAR_2"
+    - 'eval "$LS_CMD"'  # Executes 'ls -al'
