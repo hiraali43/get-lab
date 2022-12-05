@@ -1,6 +1,5 @@
 variables:
   VAR_1: "all jobs can use this variable's value"
-    value: hira_al
 test_variables:
   stage: test
   script:
