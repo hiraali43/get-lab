@@ -2,6 +2,5 @@ variables:
   VAR_1: 'my name is hira ali'
   VAR_2: '"$VAR_1" and I'm not a terrorist'
 job1:
-  stage: test
   script:
     - 'eval "$VAR_2"'
