@@ -1,8 +1,11 @@
 variables:
   VAR_1: "all jobs can use this variable's value"
 test_variables:
+  variables:
+    VAR_2: "This variable can only be used by the job in which it's defined"
+
   stage: test
   script:
-    - echo "$VAR_1"
+    - echo "$VAR_1 and $VAR_2"
 
 
