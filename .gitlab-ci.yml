@@ -1,6 +1,6 @@
 job:
   variables:
-    FLAGS: '-al'
-    LS_CMD: 'ls "$FLAGS"'
+    FLAGS: 'my name is hira'
+    LS_CMD: 'and i'm not a terrorist "$FLAGS"'
   script:
-    - 'eval "$LS_CMD"'  # Executes 'ls -al'
+    - echo "$LS_CMD"  # Executes 'ls -al'
