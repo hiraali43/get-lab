@@ -3,4 +3,4 @@ job1:
     VAR_1: 'my name is hira ali'
     VAR_2: '"$VAR_1" and I'm not a terrorist'
   script:
-    - 'eval "$VAR_2"'
+    - echo "$VAR_2"
