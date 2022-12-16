@@ -14,6 +14,7 @@ test_app:
     - apt -y install curl 
     - apt -y install nodejs
     - apt -y install npm
+    - npm update
     - npm install jest -- save-dev jest
   script: 
     - npm run test
