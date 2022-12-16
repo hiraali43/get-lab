@@ -1,1 +1,28 @@
+default:
+  image: ubuntu:20.04
+  before_script:
+    - apt -y update
+    - apt -y upgrade
+    - apt -y install apt-utils
+
+test_app:
+  stage: test
+  before_script:
+    - apt -y update
+    - apt -y upgrade
+    - apt -y install apt-utils
+    - npm install -- save-dev jest
+  script: 
+    - npm run test
+  allow_failure: true
+
+deploy_app:
+  stage: deploy
+  before_script:
+    - apt install openssh-client
+    - touch id.rsa
+    - echo "$SSH_PRIVATE_KEY" > id.rsa
+    - chmod 400 id.rsa
+  script:
+    - ssh -i id.rsa -o StrictHostKeyChecking=no ubuntu@ec2-34-226-245-64.compute-1.amazonaws.com "apt update; apt upgrade; apt install nodejs; apt install npm; cd get-lab; git pull upstream main"
 
