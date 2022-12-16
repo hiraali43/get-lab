@@ -28,5 +28,5 @@ deploy_app:
     - echo "$SSH_PRIVATE_KEY" > id.rsa
     - chmod 400 id.rsa
   script:
-    - ssh -i id.rsa -o StrictHostKeyChecking=no ubuntu@ec2-34-226-245-64.compute-1.amazonaws.com "apt update; apt upgrade; apt install nodejs; apt install npm; cd get-lab; git pull upstream main"
+    - ssh -i id.rsa -o StrictHostKeyChecking=no ubuntu@ec2-34-226-245-64.compute-1.amazonaws.com "sudo apt update; sudo apt upgrade; sudo apt install nodejs; sudo apt install npm; cd get-lab; git pull upstream main"
 
