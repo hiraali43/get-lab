@@ -11,9 +11,11 @@ test_app:
     - apt -y update
     - apt -y upgrade
     - apt -y install apt-utils
+    - curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+    - sudo bash /tmp/nodesource_setup.sh
     - apt -y install nodejs
     - apt -y install npm
-    - npm install jest #-- save-dev jest
+    - npm install jest -- save-dev jest
   script: 
     - npm run test
   allow_failure: true
