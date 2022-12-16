@@ -13,7 +13,7 @@ test_app:
     - apt -y install apt-utils
     - apt -y install curl 
     - curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
-    - sudo bash /tmp/nodesource_setup.sh
+    - bash /tmp/nodesource_setup.sh
     - apt -y install nodejs
     - apt -y install npm
     - npm install jest -- save-dev jest
