@@ -16,7 +16,6 @@ test_app:
     - apt -y install nodejs
     - node -v
     - apt -y install npm
-    - npm update
     - npm install jest -- save-dev jest
   script: 
     - npm run test
