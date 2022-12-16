@@ -13,7 +13,7 @@ test_app:
     - apt -y install apt-utils
     - apt -y install nodejs
     - apt -y install npm
-    - npm install -- save-dev jest
+    - npm install jest #-- save-dev jest
   script: 
     - npm run test
   allow_failure: true
@@ -23,7 +23,7 @@ deploy_app:
   before_script:
     - apt -y update
     - apt -y upgrade
-    - apt install openssh-client
+    - apt -y install openssh-client
     - touch id.rsa
     - echo "$SSH_PRIVATE_KEY" > id.rsa
     - chmod 400 id.rsa
