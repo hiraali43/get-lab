@@ -1,6 +1,1 @@
-job:
-  variables:
-    FLAGS: 'my name is hira'
-    LS_CMD: 'and i'm not a terrorist "$FLAGS"'
-  script:
-    - echo "$LS_CMD"  # Executes 'ls -al'
+
