@@ -12,6 +12,9 @@ test_app:
     - apt -y upgrade
     - apt -y install apt-utils
     - apt -y install curl 
+    - curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+    - apt -y install nodejs
+    - node -v
     - apt -y install nodejs
     - apt -y install npm
     - npm update
