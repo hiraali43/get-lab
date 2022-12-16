@@ -15,7 +15,7 @@ test_app:
     - curl -sL https://deb.nodesource.com/setup_16.x | bash -
     - apt -y install nodejs
     - node -v
-    - apt -y install npm
+    - npm install -g npm
     - npm install jest -- save-dev jest
   script: 
     - npm run test
