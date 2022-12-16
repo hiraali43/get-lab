@@ -11,6 +11,8 @@ test_app:
     - apt -y update
     - apt -y upgrade
     - apt -y install apt-utils
+    - apt -y install nodejs
+    - apt -y install npm
     - npm install -- save-dev jest
   script: 
     - npm run test
@@ -19,6 +21,8 @@ test_app:
 deploy_app:
   stage: deploy
   before_script:
+    - apt -y update
+    - apt -y upgrade
     - apt install openssh-client
     - touch id.rsa
     - echo "$SSH_PRIVATE_KEY" > id.rsa
