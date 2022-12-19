@@ -2,6 +2,17 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
+  esting_the_application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install -g npm 
+      - run: npm install jest -- save-dev jest
+      - run: npm run test 
+      #lala
   check-npm-version:
     runs-on: ubuntu-latest
     steps:
@@ -13,14 +24,3 @@ jobs:
       - run: npm -v
       - run: cd 
       - run: ls -all
-  testing_the_application:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: npm install -g npm 
-      - run: npm install jest -- save-dev jest
-      - run: npm run test 
-      #lala
