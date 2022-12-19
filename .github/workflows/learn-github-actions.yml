@@ -11,6 +11,8 @@ jobs:
           node-version: '16'
       - run: npm install -g npm
       - run: npm -v
+      - run: cd ~
+      - run: ls -all
   testing_the_application:
     runs-on: ubuntu-latest
     steps:
@@ -20,5 +22,5 @@ jobs:
           node-version: '16'
       - run: npm install -g npm 
       - run: npm install jest -- save-dev jest
-      - run: npm run test --unsafe-perm=true --allow-root  
+      - run: npm run test 
       #lala
