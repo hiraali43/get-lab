@@ -17,6 +17,7 @@ test_app:
     - node -v
     - npm install -g npm
     - npm install jest -- save-dev jest
+    #add
   script: 
     - npm run test
   allow_failure: true
