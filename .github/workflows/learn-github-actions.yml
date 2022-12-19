@@ -18,8 +18,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm install -g npm --unsafe-perm=true --allow-root #npm install -g npm
+      - run: npm install -g npm 
       - run: npm install jest -- save-dev jest
-      - run: sudo npm run test
+      - run: sudo npm run test --unsafe-perm=true --allow-root 
 
       #lala
