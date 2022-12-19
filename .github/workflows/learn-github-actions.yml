@@ -11,8 +11,7 @@ jobs:
           node-version: '16'
       - run: npm install -g npm
       - run: npm -v
-
-  testing the application:
+  testing_the_application:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
