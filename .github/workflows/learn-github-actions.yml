@@ -18,6 +18,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
+      - run: sudo -i
       - run: npm install -g npm
       - run: npm install jest -- save-dev jest
       - run: npm run test
